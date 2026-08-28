@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SDC Clinic — Sheikh Dental Clinic &amp; Implant Centre | Karachi</title>
+<meta name="description" content="Sheikh Dental Clinic & Implant Centre — expert, painless dental care in North Nazimabad, Karachi. Book your appointment on WhatsApp today." />
+<link rel="shortcut icon" href="android-chrome-192x192.png" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<style>
+
+  .wa-float>i{
+    font-size: 30px;
+    color: #fff;
+  }
+  :root{
+    --navy:#0B2A3C;
+    --navy-deep:#071B27;
+    --teal:#0EA88E;
+    --teal-deep:#0A7D6A;
+    --teal-glow:#5EEAD4;
+    --mint-bg:#F0FAF7;
+    --cream:#FDFDFB;
+    --coral:#FF6F59;
+    --coral-deep:#E8543E;
+    --ink:#10222C;
+    --muted:#5C7681;
+    --line: rgba(11,42,60,0.08);
+    --shadow: 0 20px 50px -20px rgba(11,42,60,0.25);
+    --radius-lg: 28px;
+    --radius-md: 18px;
+    --radius-sm: 12px;
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{ display:block; max-width:100%; }
+  a{ text-decoration:none; color:inherit; }
+  ul{ list-style:none; margin:0; padding:0; }
+  button{ font-family:inherit; cursor:pointer; }
+
+  :focus-visible{
+    outline: 3px solid var(--coral);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  .container{
+    max-width:1240px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+  section{ position:relative; }
+
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--teal-deep);
+  }
+  .eyebrow::before{
+    content:'';
+    width:22px; height:2px;
+    background:var(--coral);
+    border-radius:2px;
+  }
+
+  h1,h2,h3,h4{ margin:0; font-family:'Poppins',sans-serif; line-height:1.1; color:var(--navy); }
+  p{ margin:0; color:var(--muted); line-height:1.7; }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:16px 30px;
+    border-radius:100px;
+    font-weight:600;
+    font-size:15px;
+    border:2px solid transparent;
+    transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease, background .35s ease, color .35s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background: linear-gradient(135deg, var(--teal), var(--teal-deep));
+    color:#fff;
+    box-shadow: 0 14px 30px -10px rgba(14,168,142,0.55);
+  }
+  .btn-primary:hover{ transform:translateY(-3px); box-shadow:0 20px 34px -12px rgba(14,168,142,0.6); }
+  .btn-outline{
+    background:transparent;
+    border-color: rgba(11,42,60,0.18);
+    color:var(--navy);
+  }
+  .btn-outline:hover{ border-color:var(--navy); background:rgba(11,42,60,0.04); transform:translateY(-3px); }
+  .btn-coral{
+    background:linear-gradient(135deg, var(--coral), var(--coral-deep));
+    color:#fff;
+    box-shadow:0 14px 30px -10px rgba(255,111,89,0.55);
+  }
+  .btn-coral:hover{ transform:translateY(-3px); box-shadow:0 20px 34px -12px rgba(255,111,89,0.6); }
+  .btn svg{ width:18px; height:18px; flex-shrink:0; }
+
+  /* ================= NAVBAR ================= */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:1000;
+    padding:18px 0;
+    transition: background .4s ease, box-shadow .4s ease, padding .4s ease;
+  }
+  header.scrolled{
+    background: rgba(253,253,251,0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 8px 30px -18px rgba(11,42,60,0.3);
+    padding:10px 0;
+  }
+  nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .logo{
+    display:flex; align-items:center; gap:10px;
+    font-weight:700; font-size:20px; color:var(--navy);
+  }
+  .logo .mark{
+    width:42px; height:42px; border-radius:14px;
+    background:linear-gradient(135deg, var(--teal), var(--teal-deep));
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 10px 20px -8px rgba(14,168,142,0.6);
+  }
+  .logo .mark svg{ width:24px; height:24px; }
+  .logo small{ display:block; font-size:11px; font-weight:500; color:var(--muted); letter-spacing:.05em; }
+
+  .nav-links{ display:flex; align-items:center; gap:36px; }
+  .nav-links a{
+    font-size:15px; font-weight:500; color:var(--navy);
+    position:relative; padding:4px 0;
+  }
+  .nav-links a::after{
+    content:''; position:absolute; left:0; bottom:-2px; width:0; height:2px;
+    background:var(--coral); transition:width .3s ease;
+  }
+  .nav-links a:hover::after{ width:100%; }
+
+  .nav-cta{ display:flex; align-items:center; gap:14px; }
+  .nav-phone{
+    display:flex; align-items:center; gap:8px;
+    font-weight:600; font-size:14px; color:var(--navy);
+  }
+  .nav-phone svg{ width:18px; height:18px; color:var(--teal-deep); }
+
+  .burger{
+    display:none;
+    width:44px; height:44px;
+    border:none; background:rgba(11,42,60,0.06); border-radius:12px;
+    align-items:center; justify-content:center;
+  }
+  .burger span, .burger span::before, .burger span::after{
+    content:''; display:block; width:20px; height:2px; background:var(--navy);
+    position:relative; transition:.3s ease;
+  }
+  .burger span::before{ position:absolute; top:-7px; }
+  .burger span::after{ position:absolute; top:7px; }
+
+  .mobile-panel{
+    display:none;
+    position:fixed; inset:0; z-index:1200;
+    background:var(--navy-deep);
+    padding:100px 32px 40px;
+    color:#fff;
+  }
+  .mobile-panel.open{ display:block; }
+  .mobile-panel a{ display:block; font-size:22px; font-weight:600; color:#fff; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.1); }
+  .mobile-panel .close-btn{
+    position:absolute; top:26px; right:32px;
+    width:44px; height:44px; border-radius:12px; border:none;
+    background:rgba(255,255,255,0.1); color:#fff; font-size:22px;
+  }
+
+  /* ================= HERO ================= */
+  .hero{
+    padding:170px 0 100px;
+    background: var(--mint-bg);
+    overflow:hidden;
+    position:relative;
+  }
+  .hero-blob{
+    position:absolute; z-index:0; filter:blur(0px);
+  }
+  .blob-1{ top:-160px; right:-180px; width:640px; opacity:.9; }
+  .blob-2{ bottom:-220px; left:-160px; width:520px; opacity:.5; }
+
+  .hero-grid{
+    position:relative; z-index:2;
+    display:grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap:60px;
+    align-items:center;
+  }
+  .hero-copy h1{
+    font-size: clamp(38px, 4.6vw, 62px);
+    font-weight:700;
+    margin:20px 0 22px;
+    letter-spacing:-0.01em;
+  }
+  .hero-copy h1 .highlight{
+    color:var(--teal-deep);
+    position:relative;
+    white-space:nowrap;
+  }
+  .hero-copy p.lead{
+    font-size:17px; max-width:480px; margin-bottom:34px;
+  }
+  .hero-actions{ display:flex; gap:16px; flex-wrap:wrap; margin-bottom:38px; }
+
+  .hero-trust{ display:flex; align-items:center; gap:18px; }
+  .hero-trust .stars{ display:flex; gap:3px; }
+  .hero-trust .stars svg{ width:16px; height:16px; color:#FFB800; }
+  .hero-trust span{ font-size:14px; font-weight:500; color:var(--navy); }
+
+  .hero-visual{ position:relative; }
+  .visual-frame{
+    position:relative;
+    width:100%;
+    aspect-ratio: 1/1.05;
+    border-radius: 45% 55% 60% 40% / 50% 45% 55% 50%;
+    background: linear-gradient(160deg, var(--teal) 0%, var(--teal-deep) 55%, var(--navy) 130%);
+    box-shadow: 0 40px 70px -30px rgba(11,42,60,0.5);
+    display:flex; align-items:center; justify-content:center;
+    animation: morph 12s ease-in-out infinite;
+  }
+  @keyframes morph{
+    0%,100%{ border-radius: 45% 55% 60% 40% / 50% 45% 55% 50%; }
+    50%{ border-radius: 58% 42% 40% 60% / 45% 55% 45% 55%; }
+  }
+  .visual-frame svg.tooth-hero{ width:56%; height:56%; }
+
+  .badge-card{
+    position:absolute;
+    background:#fff;
+    border-radius:16px;
+    padding:14px 18px;
+    box-shadow: var(--shadow);
+    display:flex; align-items:center; gap:12px;
+  }
+  .badge-card .ico{
+    width:40px; height:40px; border-radius:12px;
+    display:flex; align-items:center; justify-content:center;
+    background:rgba(14,168,142,0.12);
+    flex-shrink:0;
+  }
+  .badge-card .ico svg{ width:20px; height:20px; color:var(--teal-deep); }
+  .badge-card strong{ display:block; font-size:16px; color:var(--navy); }
+  .badge-card span{ font-size:12px; color:var(--muted); }
+  .badge-1{ top:6%; left:-8%; }
+  .badge-2{ bottom:10%; right:-6%; }
+  .badge-3{ top:46%; left:-14%; background:var(--coral); }
+  .badge-3 .ico{ background:rgba(255,255,255,0.2); }
+  .badge-3 .ico svg{ color:#fff; }
+  .badge-3 strong, .badge-3 span{ color:#fff; }
+
+  .smile-divider{ display:block; width:100%; height:70px; margin-top:-2px; }
+  .smile-divider path{ stroke:var(--teal); stroke-width:3; fill:none; stroke-linecap:round; }
+
+  /* ================= TRUST STRIP ================= */
+  .trust-strip{
+    padding: 0 0 90px;
+    background: var(--mint-bg);
+    position:relative; z-index:2;
+  }
+  .trust-cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+    margin-top:10px;
+  }
+  .trust-card{
+    background:#fff;
+    border-radius: var(--radius-md);
+    padding:34px 30px;
+    box-shadow: var(--shadow);
+    transition: transform .4s ease, box-shadow .4s ease;
+  }
+  .trust-card:hover{ transform:translateY(-8px); box-shadow:0 30px 60px -22px rgba(11,42,60,0.32); }
+  .trust-card .ico{
+    width:58px; height:58px; border-radius:16px;
+    background: linear-gradient(135deg, var(--teal), var(--teal-deep));
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:20px;
+  }
+  .trust-card .ico svg{ width:28px; height:28px; color:#fff; }
+  .trust-card h3{ font-size:19px; margin-bottom:10px; }
+  .trust-card p{ font-size:14.5px; }
+
+  /* ================= ABOUT / PROCESS ================= */
+  .about{ padding:100px 0; background:var(--cream); }
+  .about-grid{
+    display:grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap:70px;
+    align-items:center;
+  }
+  .about-visual{ position:relative; }
+  .about-visual .frame-shape{
+    border-radius: 40% 60% 55% 45% / 55% 45% 60% 40%;
+    background: linear-gradient(150deg, var(--navy), var(--teal-deep));
+    aspect-ratio:1/1;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow: var(--shadow);
+  }
+  .about-visual .frame-shape svg{ width:50%; height:50%; }
+  .about h2{ font-size: clamp(28px,3vw,40px); margin:16px 0 20px; }
+  .about > .container > .about-grid > .about-copy > p.lead{ font-size:16px; margin-bottom:36px; max-width:520px; }
+
+  .process-steps{ display:flex; flex-direction:column; gap:0; }
+  .process-step{
+    display:flex; gap:20px;
+    padding:22px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .process-step:last-child{ border-bottom:none; }
+  .process-step .num{
+    flex-shrink:0;
+    width:46px; height:46px; border-radius:50%;
+    background:var(--mint-bg);
+    color:var(--teal-deep);
+    font-weight:700; font-size:16px;
+    display:flex; align-items:center; justify-content:center;
+    border:2px solid var(--teal);
+  }
+  .process-step h4{ font-size:17px; margin-bottom:6px; }
+  .process-step p{ font-size:14.5px; }
+
+  /* ================= SERVICES ================= */
+  .services{ padding:100px 0; background:var(--mint-bg); }
+  .section-head{ max-width:640px; margin-bottom:56px; }
+  .section-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
+  .section-head h2{ font-size:clamp(28px,3.2vw,42px); margin:16px 0 14px; }
+
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+  }
+  .service-card{
+    background:#fff;
+    border-radius:var(--radius-md);
+    padding:34px 28px;
+    box-shadow: 0 12px 30px -20px rgba(11,42,60,0.2);
+    border:1px solid var(--line);
+    transition: transform .4s ease, box-shadow .4s ease, border-color .4s ease;
+    position:relative;
+    overflow:hidden;
+  }
+  .service-card::before{
+    content:'';
+    position:absolute; top:0; left:0; right:0; height:4px;
+    background:linear-gradient(90deg, var(--teal), var(--coral));
+    transform:scaleX(0); transform-origin:left;
+    transition: transform .5s ease;
+  }
+  .service-card:hover::before{ transform:scaleX(1); }
+  .service-card:hover{ transform:translateY(-10px); box-shadow: var(--shadow); border-color:transparent; }
+  .service-card .ico{
+    width:56px; height:56px; border-radius:16px;
+    background:var(--mint-bg);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:22px;
+    transition: transform .5s ease, background .5s ease;
+  }
+  .service-card:hover .ico{ transform:rotate(-8deg) scale(1.08); background:linear-gradient(135deg, var(--teal), var(--teal-deep)); }
+  .service-card .ico svg{ width:26px; height:26px; color:var(--teal-deep); transition:color .5s ease; }
+  .service-card:hover .ico svg{ color:#fff; }
+  .service-card h3{ font-size:19px; margin-bottom:10px; }
+  .service-card p{ font-size:14.5px; }
+
+  /* ================= STATS ================= */
+  .stats{
+    padding:90px 0;
+    background: linear-gradient(135deg, var(--navy), var(--navy-deep));
+    position:relative;
+    overflow:hidden;
+  }
+  .stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    text-align:center;
+    position:relative; z-index:2;
+  }
+  .stat-item .num{
+    font-size:clamp(32px,4vw,52px);
+    font-weight:700;
+    color:#fff;
+    display:flex; align-items:center; justify-content:center; gap:4px;
+  }
+  .stat-item .num .suffix{ color:var(--teal-glow); }
+  .stat-item p{ color:rgba(255,255,255,0.65); font-size:14px; margin-top:6px; }
+
+  /* ================= TESTIMONIALS ================= */
+  .testimonials{ padding:100px 0; background:var(--cream); }
+  .testi-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+  }
+  .testi-card{
+    background:#fff;
+    border-radius:var(--radius-md);
+    padding:32px 28px;
+    box-shadow: 0 12px 30px -20px rgba(11,42,60,0.2);
+    border:1px solid var(--line);
+  }
+  .testi-card .stars{ display:flex; gap:3px; margin-bottom:16px; }
+  .testi-card .stars svg{ width:15px; height:15px; color:#FFB800; }
+  .testi-card p.quote{ font-size:14.5px; color:var(--ink); margin-bottom:22px; font-style:italic; }
+  .testi-person{ display:flex; align-items:center; gap:12px; }
+  .testi-person .avatar{
+    width:44px; height:44px; border-radius:50%;
+    background: linear-gradient(135deg, var(--teal), var(--coral));
+    display:flex; align-items:center; justify-content:center;
+    color:#fff; font-weight:700; font-size:15px;
+  }
+  .testi-person strong{ display:block; font-size:14.5px; color:var(--navy); }
+  .testi-person span{ font-size:12.5px; color:var(--muted); }
+
+  /* ================= LOCATION ================= */
+  .location{ padding:100px 0; background:var(--mint-bg); }
+  .location-grid{
+    display:grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap:50px;
+    align-items:stretch;
+  }
+  .location-info{
+    background:#fff;
+    border-radius:var(--radius-lg);
+    padding:40px 34px;
+    box-shadow: var(--shadow);
+  }
+  .info-row{ display:flex; gap:16px; padding:18px 0; border-bottom:1px solid var(--line); }
+  .info-row:first-of-type{ padding-top:0; }
+  .info-row:last-child{ border-bottom:none; }
+  .info-row .ico{
+    width:44px; height:44px; border-radius:12px; flex-shrink:0;
+    background:var(--mint-bg);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .info-row .ico svg{ width:20px; height:20px; color:var(--teal-deep); }
+  .info-row h4{ font-size:15.5px; margin-bottom:4px; }
+  .info-row p{ font-size:14px; }
+  .info-row a{ color:var(--teal-deep); font-weight:600; }
+
+  .map-frame{
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    min-height:100%;
+    position:relative;
+    border: 6px solid #fff;
+  }
+  .map-frame iframe{ width:100%; height:100%; min-height:420px; display:block; }
+
+  /* ================= APPOINTMENT / CONTACT ================= */
+  .appointment{ padding:100px 0 120px; background:var(--cream); }
+  .appointment-wrap{
+    background: linear-gradient(135deg, var(--navy), var(--navy-deep));
+    border-radius: var(--radius-lg);
+    padding:60px;
+    display:grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap:56px;
+    align-items:center;
+    box-shadow: var(--shadow);
+    position:relative;
+    overflow:hidden;
+  }
+  .appointment-copy h2{ color:#fff; font-size:clamp(26px,3vw,36px); margin:14px 0 18px; }
+  .appointment-copy p{ color:rgba(255,255,255,0.7); margin-bottom:28px; max-width:420px; }
+  .appointment-copy .eyebrow{ color:var(--teal-glow); }
+  .appointment-quick{ display:flex; flex-direction:column; gap:14px; }
+  .quick-item{ display:flex; align-items:center; gap:12px; color:#fff; font-size:14.5px; }
+  .quick-item .ico{
+    width:38px; height:38px; border-radius:10px;
+    background:rgba(255,255,255,0.1);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  .quick-item .ico svg{ width:18px; height:18px; color:var(--teal-glow); }
+
+  form.booking-form{
+    background:#fff;
+    border-radius:20px;
+    padding:34px;
+    box-shadow: 0 30px 60px -20px rgba(0,0,0,0.4);
+  }
+  .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:18px; }
+  .field{ display:flex; flex-direction:column; gap:7px; }
+  .field.full{ grid-column:1/-1; }
+  .field label{ font-size:13px; font-weight:600; color:var(--navy); }
+  .field input, .field select, .field textarea{
+    font-family:'Poppins',sans-serif;
+    border:1.5px solid var(--line);
+    border-radius:12px;
+    padding:13px 14px;
+    font-size:14.5px;
+    color:var(--ink);
+    background:var(--mint-bg);
+    transition: border-color .3s ease, box-shadow .3s ease;
+    width:100%;
+  }
+  .field textarea{ resize:vertical; min-height:90px; font-family:'Poppins',sans-serif; }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    outline:none;
+    border-color: var(--teal);
+    box-shadow: 0 0 0 4px rgba(14,168,142,0.15);
+    background:#fff;
+  }
+  .field .error-msg{
+    font-size:12px; color:var(--coral-deep); font-weight:500; min-height:14px;
+  }
+  .field.has-error input, .field.has-error select{ border-color:var(--coral); }
+
+  .booking-form button[type="submit"]{
+    width:100%; margin-top:6px;
+  }
+  .form-note{ display:flex; align-items:center; gap:8px; margin-top:14px; font-size:12.5px; color:var(--muted); justify-content:center; }
+  .form-note svg{ width:14px; height:14px; color:var(--teal-deep); }
+
+  .form-success{
+    display:none;
+    align-items:center; gap:12px;
+    background:rgba(14,168,142,0.1);
+    border:1.5px solid var(--teal);
+    color:var(--teal-deep);
+    padding:14px 16px; border-radius:12px;
+    font-size:13.5px; font-weight:500;
+    margin-top:16px;
+  }
+  .form-success.show{ display:flex; }
+  .form-success svg{ width:20px; height:20px; flex-shrink:0; }
+
+  /* ================= FOOTER ================= */
+  footer{ background:var(--navy-deep); padding:70px 0 26px; color:rgba(255,255,255,0.7); }
+  .footer-grid{
+    display:grid;
+    grid-template-columns: 1.3fr 0.8fr 0.9fr 1fr;
+    gap:40px;
+    padding-bottom:46px;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+  }
+  .footer-brand .logo{ color:#fff; margin-bottom:16px; }
+  .footer-brand p{ color:rgba(255,255,255,0.55); font-size:14px; max-width:300px; }
+  .footer-col h4{ color:#fff; font-size:15px; margin-bottom:18px; }
+  .footer-col ul li{ margin-bottom:12px; }
+  .footer-col a{ font-size:14px; color:rgba(255,255,255,0.6); transition:color .3s ease; }
+  .footer-col a:hover{ color:var(--teal-glow); }
+  .footer-bottom{
+    padding-top:24px;
+    display:flex; align-items:center; justify-content:space-between;
+    font-size:13px; color:rgba(255,255,255,0.45);
+    flex-wrap:wrap; gap:10px;
+  }
+
+  /* ================= WHATSAPP FLOAT ================= */
+  .wa-float{
+    position:fixed; bottom:26px; right:26px; z-index:900;
+    width:62px; height:62px; border-radius:50%;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow: 0 16px 32px -10px rgba(37,211,102,0.6);
+    border:none;
+  }
+  .wa-float svg{ width:30px; height:30px; color:#fff; }
+  .wa-float::before{
+    content:'';
+    position:absolute; inset:0; border-radius:50%;
+    border:2px solid rgba(37,211,102,0.6);
+    animation: pulse-ring 2.2s ease-out infinite;
+  }
+  @keyframes pulse-ring{
+    0%{ transform:scale(1); opacity:0.8; }
+    100%{ transform:scale(1.6); opacity:0; }
+  }
+
+  /* ================= REVEAL UTILITY ================= */
+  .reveal{ opacity:0; transform:translateY(40px); }
+
+  /* ================= RESPONSIVE ================= */
+  @media (max-width: 1024px){
+    .hero-grid, .about-grid, .location-grid{ grid-template-columns:1fr; }
+    .hero-visual{ order:-1; max-width:420px; margin:0 auto 40px; }
+    .stats-grid{ grid-template-columns:repeat(2,1fr); row-gap:36px; }
+    .services-grid, .testi-grid{ grid-template-columns:repeat(2,1fr); }
+    .appointment-wrap{ grid-template-columns:1fr; padding:40px 28px; }
+    .footer-grid{ grid-template-columns:1fr 1fr; row-gap:34px; }
+  }
+  @media (max-width: 768px){
+    .nav-links, .nav-phone{ display:none; }
+    .burger{ display:flex; }
+    .trust-cards{ grid-template-columns:1fr; }
+    .services-grid, .testi-grid{ grid-template-columns:1fr; }
+    .form-row{ grid-template-columns:1fr; }
+    .container{ padding:0 20px; }
+    .hero{ padding:140px 0 70px; }
+    .footer-grid{ grid-template-columns:1fr; }
+    .badge-card{ position:static; margin-top:14px; }
+    .badge-1,.badge-2,.badge-3{ position:static; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important; }
+  }
+
+  .logo>img{
+    height: 50px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header id="siteHeader">
+  <div class="container">
+    <nav>
+      <a href="#home" class="logo">
+        <img src="logo.jfif" alt="">
+        <span>SDC Clinic<small>Sheikh Dental &amp; Implant Centre</small></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#appointment">Contact</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="tel:+923032346644" class="nav-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          0303 234 6644
+        </a>
+        <a href="#appointment" class="btn btn-primary">Book Appointment</a>
+        <button class="burger" id="burgerBtn" aria-label="Open menu"><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= MOBILE PANEL ================= -->
+<div class="mobile-panel" id="mobilePanel">
+  <button class="close-btn" id="closePanel" aria-label="Close menu">&times;</button>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#testimonials">Reviews</a>
+  <a href="#location">Location</a>
+  <a href="#appointment">Contact</a>
+  <a href="tel:+923032346644" style="color:var(--teal-glow);"><i class="fa-solid fa-phone"></i> 0303 234 6644</a>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <svg class="hero-blob blob-1" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#0EA88E" fill-opacity="0.14" d="M431,304Q416,358,368,392Q320,426,266,412Q212,398,168,364Q124,330,116,270Q108,210,148,166Q188,122,244,102Q300,82,352,110Q404,138,422,190Q440,242,431,304Z"/>
+  </svg>
+  <svg class="hero-blob blob-2" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#0B2A3C" fill-opacity="0.08" d="M431,304Q416,358,368,392Q320,426,266,412Q212,398,168,364Q124,330,116,270Q108,210,148,166Q188,122,244,102Q300,82,352,110Q404,138,422,190Q440,242,431,304Z"/>
+  </svg>
+
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow reveal">North Nazimabad, Karachi</span>
+      <h1 class="reveal">Teeth Aren't Pearly, <span class="highlight">Until You Smile</span></h1>
+      <p class="lead reveal">Sheikh Dental Clinic &amp; Implant Centre brings expert, gentle dentistry to Block A — from routine checkups to full implant care, we look after your smile like it's our own.</p>
+      <div class="hero-actions reveal">
+        <a href="#appointment" class="btn btn-primary">
+        <i class="fa-brands fa-whatsapp"></i>
+          Book on WhatsApp
+        </a>
+        <a href="tel:+923032346644" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Now
+        </a>
+      </div>
+      <div class="hero-trust reveal">
+        <div class="stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1L12 2z"/></svg>
+        </div>
+        <span>Trusted by 5,000+ patients in North Nazimabad</span>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <img src="hero.png" alt="">
+
+      <div class="badge-card badge-1">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg></div>
+        <div><strong>15+ Years</strong><span>Clinical Experience</span></div>
+      </div>
+      <div class="badge-card badge-2">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <div><strong>Painless Care</strong><span>Modern Sedation</span></div>
+      </div>
+      <div class="badge-card badge-3">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z"/></svg></div>
+        <div><strong>5,000+</strong><span>Happy Smiles</span></div>
+      </div>
+    </div>
+  </div>
+
+  <svg class="smile-divider" viewBox="0 0 1200 70" preserveAspectRatio="none">
+    <path id="smilePath" d="M0,20 Q300,90 600,20 T1200,20"/>
+  </svg>
+</section>
+
+<!-- ================= TRUST STRIP ================= -->
+<section class="trust-strip">
+  <div class="container">
+    <div class="trust-cards">
+      <div class="trust-card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg></div>
+        <h3>Personalised Treatment</h3>
+        <p>Every plan is built around your teeth, your budget and your schedule — never a one-size-fits-all routine.</p>
+      </div>
+      <div class="trust-card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/><path d="M8.5 13.5 6 22l6-3 6 3-2.5-8.5"/></svg></div>
+        <h3>Certified Specialists</h3>
+        <p>Our dentists hold advanced certifications in implants, orthodontics and cosmetic dentistry.</p>
+      </div>
+      <div class="trust-card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <h3>Painless &amp; Modern</h3>
+        <p>Digital X-rays, laser dentistry and gentle sedation options keep every visit comfortable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT / PROCESS ================= -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-visual reveal">
+      <img src="hero.png" alt="">
+    </div>
+
+    <div class="about-copy">
+      <span class="eyebrow reveal">About SDC Clinic</span>
+      <h2 class="reveal">Smiling Can Make You And Others Happy</h2>
+      <p class="lead reveal">For over a decade, Sheikh Dental Clinic &amp; Implant Centre has combined modern dental technology with a calm, welcoming environment — so that every patient in North Nazimabad leaves feeling confident about their smile.</p>
+
+      <div class="process-steps">
+        <div class="process-step reveal">
+          <div class="num">1</div>
+          <div><h4>Free Consultation</h4><p>We start by listening — a full check-up and honest advice on the right treatment for you.</p></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="num">2</div>
+          <div><h4>Diagnosis &amp; Plan</h4><p>Digital imaging helps us map an exact, transparent treatment plan with clear costs upfront.</p></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="num">3</div>
+          <div><h4>Gentle Treatment</h4><p>Procedures are carried out with modern, minimally invasive techniques for a comfortable visit.</p></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="num">4</div>
+          <div><h4>Aftercare Support</h4><p>We follow up after every procedure to make sure your recovery and results stay on track.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow reveal" style="justify-content:center;">Our Services</span>
+      <h2 class="reveal">Complete Dental Care, Under One Roof</h2>
+      <p class="reveal">From a routine cleaning to a full implant, our team handles it with the same care and attention to detail.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21c-4-4-8-7.5-8-12a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 4.5-4 8-8 12"/></svg></div>
+        <h3>General Dentistry</h3>
+        <p>Check-ups, cleanings and fillings to keep your teeth healthy for the long run.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 7v6c0 5.2 3.8 9.4 9 10 5.2-.6 9-4.8 9-10V7l-9-5Z"/></svg></div>
+        <h3>Dental Implants</h3>
+        <p>Permanent, natural-looking replacements for missing teeth using precision implant systems.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z"/></svg></div>
+        <h3>Cosmetic Dentistry</h3>
+        <p>Veneers, bonding and smile makeovers designed to fit your face and personality.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg></div>
+        <h3>Braces &amp; Aligners</h3>
+        <p>Traditional braces and clear aligners for kids, teens and adults alike.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></div>
+        <h3>Teeth Whitening</h3>
+        <p>Safe, in-clinic whitening treatments that brighten your smile in a single visit.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a5 5 0 0 0-5 5c0 3 2 4 2 7v3a3 3 0 0 0 6 0v-3c0-3 2-4 2-7a5 5 0 0 0-5-5Z"/></svg></div>
+        <h3>Root Canal Treatment</h3>
+        <p>Pain-free root canal therapy using modern rotary techniques and local anaesthesia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="num"><span class="count" data-target="15">0</span><span class="suffix">+</span></div>
+        <p>Years of Service</p>
+      </div>
+      <div class="stat-item reveal">
+        <div class="num"><span class="count" data-target="5000">0</span><span class="suffix">+</span></div>
+        <p>Happy Patients</p>
+      </div>
+      <div class="stat-item reveal">
+        <div class="num"><span class="count" data-target="30">0</span><span class="suffix">+</span></div>
+        <p>Procedures Offered</p>
+      </div>
+      <div class="stat-item reveal">
+        <div class="num"><span class="count" data-target="98">0</span><span class="suffix">%</span></div>
+        <p>Patient Satisfaction</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow reveal" style="justify-content:center;">Patient Stories</span>
+      <h2 class="reveal">What Our Patients Say</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1L12 2z"/></svg>
+        </div>
+        <p class="quote">"I was terrified of the dentist before coming here. The staff explained every step and my root canal was completely painless."</p>
+        <div class="testi-person">
+          <div class="avatar">A</div>
+          <div><strong>Ayesha K.</strong><span>North Nazimabad</span></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1L12 2z"/></svg>
+        </div>
+        <p class="quote">"Got dental implants done here after years of hesitation. The team was professional and the results look completely natural."</p>
+        <div class="testi-person">
+          <div class="avatar">F</div>
+          <div><strong>Faisal R.</strong><span>Block A, North Nazimabad</span></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1L12 2z"/></svg>
+        </div>
+        <p class="quote">"Booked my appointment on WhatsApp within a minute and got seen the same evening. Great experience for my kids' check-up too."</p>
+        <div class="testi-person">
+          <div class="avatar">S</div>
+          <div><strong>Sana M.</strong><span>North Nazimabad Town</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LOCATION ================= -->
+<section class="location" id="location">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Visit Us</span>
+      <h2>Find Sheikh Dental Clinic</h2>
+    </div>
+
+    <div class="location-grid">
+      <div class="location-info reveal">
+        <div class="info-row">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><h4>Clinic Address</h4><p>A 130, Block A, North Nazimabad Town, Karachi, Pakistan</p></div>
+        </div>
+        <div class="info-row">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><h4>Phone &amp; WhatsApp</h4><p><a href="tel:+923032346644">0303 234 6644</a></p></div>
+        </div>
+        <div class="info-row">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><h4>Opening Hours</h4><p>Mon – Sat: 11:00 AM – 9:00 PM<br>Sunday: By appointment only</p></div>
+        </div>
+        <div class="info-row">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 20l-5.447-2.724A1 1 0 0 1 3 16.382V5.618a1 1 0 0 1 1.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0 0 21 18.83V8.062a1 1 0 0 0-.553-.894L15 4m0 13V4m0 0L9 7"/></svg></div>
+          <div><h4>Plus Code</h4><p>W2MH+CX, North Nazimabad Town, Karachi</p></div>
+        </div>
+        <a href="#appointment" class="btn btn-coral" style="margin-top:22px; width:100%;">Get Directions &amp; Book Visit</a>
+      </div>
+
+      <div class="map-frame reveal">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4489.469212225584!2d67.0274164760765!3d24.9335585423274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f006dde5a13%3A0x464752947241721e!2sSheikh%20Dental%20Clinic%20%26%20Implant%20Centre!5e1!3m2!1sen!2s!4v1787837707194!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="SDC Clinic Location Map"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= APPOINTMENT ================= -->
+<section class="appointment" id="appointment">
+  <div class="container">
+    <div class="appointment-wrap">
+      <div class="appointment-copy reveal">
+        <span class="eyebrow">Book An Appointment</span>
+        <h2>Let's Get You Smiling Again</h2>
+        <p>Fill the form and press send — your details go straight to our WhatsApp so we can confirm your slot right away.</p>
+        <div class="appointment-quick">
+          <div class="quick-item">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            A 130, Block A, North Nazimabad Town, Karachi
+          </div>
+          <div class="quick-item">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            0303 234 6644
+          </div>
+        </div>
+      </div>
+
+      <form class="booking-form reveal" id="bookingForm" novalidate>
+        <div class="form-row">
+          <div class="field" id="fieldName">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="e.g. Zain Sheikh" autocomplete="name" required>
+            <span class="error-msg"></span>
+          </div>
+          <div class="field" id="fieldPhone">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="03xx xxxxxxx" autocomplete="tel" required>
+            <span class="error-msg"></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field" id="fieldService">
+            <label for="serviceType">Service Needed</label>
+            <select id="serviceType" name="serviceType" required>
+              <option value="" disabled selected>Select a service</option>
+              <option value="General Checkup">General Checkup &amp; Cleaning</option>
+              <option value="Dental Implants">Dental Implants</option>
+              <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+              <option value="Braces / Aligners">Braces / Aligners</option>
+              <option value="Teeth Whitening">Teeth Whitening</option>
+              <option value="Root Canal">Root Canal Treatment</option>
+              <option value="Other">Other</option>
+            </select>
+            <span class="error-msg"></span>
+          </div>
+          <div class="field" id="fieldDate">
+            <label for="preferredDate">Preferred Date</label>
+            <input type="date" id="preferredDate" name="preferredDate">
+            <span class="error-msg"></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field full" id="fieldMessage">
+            <label for="messageBox">Message (optional)</label>
+            <textarea id="messageBox" name="messageBox" placeholder="Tell us more about your concern..."></textarea>
+            <span class="error-msg"></span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-1.5-.7-2.4-1.3-3.4-2.9-.3-.4.3-.4.7-1.3.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2.1 3.2 5 4.4.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.2 0-.2-.2-.2-.5-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.6 1.4 5.1L2 22l5.1-1.3C8.5 21.6 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-3-.2-.3C4 14.7 3.5 13.4 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z"/></svg>
+          Send Message on WhatsApp
+        </button>
+
+        <div class="form-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Your message opens directly in WhatsApp — nothing is stored on this site.
+        </div>
+
+        <div class="form-success" id="formSuccess">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Opening WhatsApp with your appointment details...
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <span class="mark">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.5 2 6 4.2 6 7.5c0 2.6 1.1 4.2 1.5 7 .3 2.1.5 5 1.8 6.7.5.7 1.4 1 2 .2.6-.8.7-2.4 1-3.4.2-.7 1.2-.7 1.4 0 .3 1 .4 2.6 1 3.4.6.8 1.5.5 2-.2 1.3-1.7 1.5-4.6 1.8-6.7.4-2.8 1.5-4.4 1.5-7C18 4.2 15.5 2 12 2Z" fill="white"/></svg>
+          </span>
+          <span>SDC Clinic</span>
+        </a>
+        <p>Sheikh Dental Clinic &amp; Implant Centre — expert, gentle dental care in the heart of North Nazimabad, Karachi.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#appointment">Book Appointment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Dental Implants</a></li>
+          <li><a href="#services">Cosmetic Dentistry</a></li>
+          <li><a href="#services">Braces &amp; Aligners</a></li>
+          <li><a href="#services">Root Canal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>A 130, Block A, North Nazimabad Town, Karachi</li>
+          <li><a href="tel:+923032346644">0303 234 6644</a></li>
+          <li>Mon–Sat: 11 AM – 9 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SDC Clinic — Sheikh Dental Clinic &amp; Implant Centre. All rights reserved.</span>
+      <span>Made with care in Karachi</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= WHATSAPP FLOAT BUTTON ================= -->
+<a href="#" class="wa-float" id="waFloat" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+(function(){
+  "use strict";
+
+  var WHATSAPP_NUMBER = "923032346644"; // Pakistan country code + local number without leading 0
+
+  /* ---------- Header scroll state ---------- */
+  var header = document.getElementById('siteHeader');
+  function onScroll(){
+    if(window.scrollY > 40){ header.classList.add('scrolled'); }
+    else{ header.classList.remove('scrolled'); }
+  }
+  window.addEventListener('scroll', onScroll, { passive:true });
+  onScroll();
+
+  /* ---------- Mobile menu ---------- */
+  var burger = document.getElementById('burgerBtn');
+  var panel = document.getElementById('mobilePanel');
+  var closeBtn = document.getElementById('closePanel');
+  if(burger && panel && closeBtn){
+    burger.addEventListener('click', function(){ panel.classList.add('open'); });
+    closeBtn.addEventListener('click', function(){ panel.classList.remove('open'); });
+    panel.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click', function(){ panel.classList.remove('open'); });
+    });
+  }
+
+  /* ---------- WhatsApp floating button (general greeting) ---------- */
+  var waFloat = document.getElementById('waFloat');
+  if(waFloat){
+    waFloat.addEventListener('click', function(e){
+      e.preventDefault();
+      var msg = "Hello SDC Clinic, I would like to book a dental appointment.";
+      window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg), "_blank");
+    });
+  }
+
+  /* ---------- Booking form -> WhatsApp ---------- */
+  var form = document.getElementById('bookingForm');
+  var successBox = document.getElementById('formSuccess');
+
+  function setError(fieldId, message){
+    var field = document.getElementById(fieldId);
+    if(!field) return;
+    var errEl = field.querySelector('.error-msg');
+    if(message){
+      field.classList.add('has-error');
+      if(errEl) errEl.textContent = message;
+    } else {
+      field.classList.remove('has-error');
+      if(errEl) errEl.textContent = '';
+    }
+  }
+
+  function isValidPhone(value){
+    var digitsOnly = value.replace(/[^0-9]/g, '');
+    return digitsOnly.length >= 10 && digitsOnly.length <= 13;
+  }
+
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      successBox.classList.remove('show');
+
+      var name = document.getElementById('fullName').value.trim();
+      var phone = document.getElementById('phoneNumber').value.trim();
+      var service = document.getElementById('serviceType').value;
+      var date = document.getElementById('preferredDate').value;
+      var message = document.getElementById('messageBox').value.trim();
+
+      var valid = true;
+
+      if(name.length < 2){
+        setError('fieldName', 'Please enter your full name.');
+        valid = false;
+      } else { setError('fieldName', ''); }
+
+      if(!isValidPhone(phone)){
+        setError('fieldPhone', 'Please enter a valid phone number.');
+        valid = false;
+      } else { setError('fieldPhone', ''); }
+
+      if(!service){
+        setError('fieldService', 'Please select a service.');
+        valid = false;
+      } else { setError('fieldService', ''); }
+
+      if(!valid) return;
+
+      var lines = [
+        "Hello SDC Clinic, I would like to book an appointment.",
+        "",
+        "Name: " + name,
+        "Phone: " + phone,
+        "Service: " + service
+      ];
+      if(date){ lines.push("Preferred Date: " + date); }
+      if(message){ lines.push("Message: " + message); }
+
+      var whatsappMessage = lines.join("\n");
+      var whatsappURL = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(whatsappMessage);
+
+      successBox.classList.add('show');
+      window.open(whatsappURL, "_blank");
+
+      form.reset();
+      window.setTimeout(function(){ successBox.classList.remove('show'); }, 6000);
+    });
+
+    // Clear individual field errors as the user types/selects
+    ['fullName','phoneNumber','serviceType','preferredDate','messageBox'].forEach(function(id){
+      var el = document.getElementById(id);
+      if(!el) return;
+      var wrapId = 'field' + id.charAt(0).toUpperCase() + id.slice(1);
+      el.addEventListener('input', function(){
+        var wrap = el.closest('.field');
+        if(wrap) wrap.classList.remove('has-error');
+      });
+      el.addEventListener('change', function(){
+        var wrap = el.closest('.field');
+        if(wrap) wrap.classList.remove('has-error');
+      });
+    });
+  }
+
+  /* ---------- GSAP animations ---------- */
+  if(window.gsap){
+    gsap.registerPlugin(ScrollTrigger);
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if(!reduceMotion){
+      // Hero entrance
+      gsap.timeline({ defaults:{ ease:'power3.out' } })
+        .to('.hero-copy .eyebrow', { opacity:1, y:0, duration:.6 })
+        .to('.hero-copy h1', { opacity:1, y:0, duration:.7 }, '-=.35')
+        .to('.hero-copy .lead', { opacity:1, y:0, duration:.7 }, '-=.4')
+        .to('.hero-actions', { opacity:1, y:0, duration:.6 }, '-=.4')
+        .to('.hero-trust', { opacity:1, y:0, duration:.6 }, '-=.35')
+        .to('.hero-visual', { opacity:1, y:0, duration:.9 }, '-=.7');
+
+      // Floating badges
+      gsap.to('.badge-1', { y:-14, duration:2.6, repeat:-1, yoyo:true, ease:'sine.inOut' });
+      gsap.to('.badge-2', { y:14, duration:3, repeat:-1, yoyo:true, ease:'sine.inOut', delay:.4 });
+      gsap.to('.badge-3', { y:-10, x:6, duration:2.4, repeat:-1, yoyo:true, ease:'sine.inOut', delay:.8 });
+
+      // Smile-line draw
+      var smilePath = document.getElementById('smilePath');
+      if(smilePath && smilePath.getTotalLength){
+        var len = smilePath.getTotalLength();
+        smilePath.style.strokeDasharray = len;
+        smilePath.style.strokeDashoffset = len;
+        gsap.to(smilePath, {
+          strokeDashoffset: 0,
+          duration: 2,
+          ease: 'power2.inOut',
+          scrollTrigger: { trigger: '.smile-divider', start: 'top 90%' }
+        });
+      }
+
+      // Generic scroll reveals for everything below the hero
+      var revealEls = gsap.utils.toArray('.reveal:not(.hero-copy *):not(.hero-visual)');
+      revealEls.forEach(function(el){
+        gsap.to(el, {
+          opacity:1, y:0, duration:.8, ease:'power3.out',
+          scrollTrigger:{ trigger: el, start:'top 88%' }
+        });
+      });
+
+      // Count-up stats
+      gsap.utils.toArray('.count').forEach(function(el){
+        var target = parseFloat(el.getAttribute('data-target'));
+        var proxy = { val: 0 };
+        ScrollTrigger.create({
+          trigger: el,
+          start: 'top 85%',
+          once: true,
+          onEnter: function(){
+            gsap.to(proxy, {
+              val: target,
+              duration: 1.8,
+              ease: 'power2.out',
+              onUpdate: function(){ el.textContent = Math.round(proxy.val); }
+            });
+          }
+        });
+      });
+    } else {
+      // Reduced motion: just show everything immediately
+      gsap.set('.reveal', { opacity:1, y:0 });
+      gsap.utils.toArray('.count').forEach(function(el){
+        el.textContent = el.getAttribute('data-target');
+      });
+    }
+  } else {
+    // GSAP failed to load: fail safe, show all content
+    document.querySelectorAll('.reveal').forEach(function(el){
+      el.style.opacity = 1;
+      el.style.transform = 'none';
+    });
+    document.querySelectorAll('.count').forEach(function(el){
+      el.textContent = el.getAttribute('data-target');
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
